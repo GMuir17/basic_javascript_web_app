@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     const firstName = event.target.first_name.value;
+    const lastName = event.target.last_name.value;
     // TODO: do this for all the other form elements
 
     const emperorDetails = document.createElement("li");
-    emperorDetails.textContent = `${firstName}`;
+    emperorDetails.textContent = `${firstName} ${lastName}`;
 
     emperorList.appendChild(emperorDetails);
 
