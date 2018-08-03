@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("#emperor-form");
+  const deleteButton = document.querySelector("#delete-button")
   const emperorList = document.createElement("ul");
   const emperorListDiv = document.querySelector("#emperor-list");
   emperorListDiv.appendChild(emperorList);
@@ -22,11 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     emperorList.appendChild(emperorDetails);
 
-
     form.reset();
   });
 
-
+  deleteButton.addEventListener("click", () => {
+    emperorList.innerHTML = "";
+  });
 
 
 
