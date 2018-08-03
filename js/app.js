@@ -1,20 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("#emperor-form");
-
   const deleteButton = document.querySelector("#delete-button")
   deleteButton.hidden = true;
-
   const emperorList = document.createElement("ul");
-
   const emperorListDiv = document.querySelector("#emperor-list");
   emperorListDiv.hidden = true;
-
   const emperorListTitle = document.querySelector("#emperor_list_title");
   emperorListTitle.hidden = true;
 
   emperorListDiv.appendChild(emperorList);
-
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -42,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   deleteButton.addEventListener("click", () => {
     emperorList.innerHTML = "";
+
+    deleteButton.hidden = true;
+    emperorListDiv.hidden = true;
+    emperorListTitle.hidden = true;
   });
 
 
