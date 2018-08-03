@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = event.target.title.value;
     const reignStart = event.target.reign_start.value;
     const reignEnd = event.target.reign_end.value;
+    const meansOfDeath = event.target.means_of_death.value;
     // TODO: do this for all the other form elements
 
     const emperorDetails = document.createElement("li");
-    emperorDetails.textContent = `${firstName} ${familyName} ${title}, ruled from ${reignStart} to ${reignEnd} AD`;
+    emperorDetails.textContent =
+    `${firstName} ${familyName} ${title}, ruled from ${reignStart} to ${reignEnd} AD, died ${meansOfDeath}`;
 
     emperorList.appendChild(emperorDetails);
 

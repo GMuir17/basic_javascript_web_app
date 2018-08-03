@@ -34,10 +34,22 @@
 
         <div class="form-item">
           <label for="reign_start">Reign Began:</label>
-          <input type="number" id="reign_start">
-          
+          <input type="number" id="reign_start" required>
+
           <label for="reign_end">Reign Ended:</label>
-          <input type="number" id="reign_end">
+          <input type="number" id="reign_end" required>
+        </div>
+        <br>
+
+        <div class="form-item">
+          <label for="means_of_death">Means of Death:</label>
+          <select id="means_of_death" required>
+            <option value="" disabled selected></option>
+            <option value="by assassination">Assassination</option>
+            <option value="in battle">Killed in Battle</option>
+            <option value="from disease">Disease</option>
+            <option value="peacefully">Peacefully</option>
+          </select>
         </div>
 
       </div>
