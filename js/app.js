@@ -20,7 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const firstName = event.target.first_name.value;
     const familyName = event.target.family_name.value;
-    const title = event.target.title.value;
+
+    function getValueFromTitleCheckBox() {
+      let titles = document.querySelectorAll(".titles");
+      let values = "";
+
+      for (let i = 0; i < 4; i++) {
+        if (titles[i].checked === true) {
+          values += titles[i].value + " ";
+        }
+      }
+      return values;
+    };
+
     const reignStart = event.target.reign_start.value;
     const reignEnd = event.target.reign_end.value;
     const dateMilleniun = document.querySelector("input[name='date_choice']:checked").value;
@@ -28,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const emperorDetails = document.createElement("li");
     emperorDetails.textContent =
-    `${firstName} ${familyName} ${title}, ruled from ${reignStart} to ${reignEnd} ${dateMilleniun}, died ${meansOfDeath}`;
+    `${getValueFromTitleCheckBox()} ${firstName} ${familyName}, ruled from ${reignStart} to ${reignEnd} ${dateMilleniun}, died ${meansOfDeath}`;
 
     emperorList.appendChild(emperorDetails);
 
