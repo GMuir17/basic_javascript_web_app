@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const firstName = event.target.first_name.value;
+    // TODO: do this for all the other form elements
+
+    const emperorDetails = document.createElement("li");
+    emperorDetails.textContent = `${firstName}`;
+
+    emperorList.appendChild(emperorDetails);
+
+
+    form.reset();
   });
 
 
