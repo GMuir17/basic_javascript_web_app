@@ -1,6 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.querySelector("#emperor-form");
+
+  const firstNameInput = document.querySelector("#first_name");
+
+  // TODO: Ask about this
+  firstNameInput.addEventListener("input", (event) => {
+    if (firstNameInput.validity.patternMismatch) {
+      firstNameInput.setCustomValidity("All good names end in 'us'");
+    }
+    else {
+      firstNameInput.setCustomValidity("");
+    }
+  });
+
   const deleteButton = document.querySelector("#delete-button")
   deleteButton.hidden = true;
   const emperorList = document.createElement("ul");
@@ -54,8 +67,5 @@ document.addEventListener("DOMContentLoaded", () => {
     emperorListDiv.hidden = true;
     emperorListTitle.hidden = true;
   });
-
-
-
 
 });

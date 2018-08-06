@@ -1,1 +1,14 @@
 /* keep */
+
+body {
+  font-family: 'Vesper Libre', serif;
+  background-color: #C9B9DB;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+input:invalid {
+  border: 1px dashed red;
+}
